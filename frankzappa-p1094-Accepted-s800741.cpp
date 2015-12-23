@@ -43,7 +43,6 @@ int connect(UnionFind * u, int p, int q) {
   } 
 }
 
-
 int main() {
   int t, n;
   int x, y;
