@@ -12,13 +12,13 @@ int main() {
     n = k;
     c = 0;
     while (k--) {
-	  scanf("%d", &a);
-	  c += a;
-	}
-	if (c % n == 0)
-	  printf("YES\n");
-	else 
-	  printf("NO\n");
+      scanf("%d", &a);
+        c += a;
+    }
+    if (c % n == 0)
+      printf("YES\n");
+    else 
+      printf("NO\n");
   }
   return 0;
 }
