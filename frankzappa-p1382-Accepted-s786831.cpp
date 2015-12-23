@@ -27,8 +27,8 @@ int main() {
   scanf("%d", &t);
   ull a, b;
   while (t--) {
-	scanf("%llu %llu", &a, &b);
-	if (pow(nearest_cube(a), 3) == a)
+    scanf("%llu %llu", &a, &b);
+    if (pow(nearest_cube(a), 3) == a)
       printf("%d\n", modulo(sum(nearest_cube(b)) - sum(nearest_cube(a - 1)), 1000007));
     else
       printf("%d\n", modulo(sum(nearest_cube(b)) - sum(nearest_cube(a)), 1000007));
