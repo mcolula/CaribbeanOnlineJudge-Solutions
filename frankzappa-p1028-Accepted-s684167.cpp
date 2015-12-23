@@ -18,7 +18,7 @@ bool sub_sec(const char * s, const char * t) {
 int main() {
   char s[30];
   char t[30];
-	while(scanf("%s %s", s, t) != EOF)
+  while(scanf("%s %s", s, t) != EOF)
     printf("%s\n", ans(sub_sec(s, t)));
   return 0;
 }
