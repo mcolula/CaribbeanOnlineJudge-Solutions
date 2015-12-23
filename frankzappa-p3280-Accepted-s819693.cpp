@@ -17,8 +17,8 @@ int main() {
   cin.tie(0);
   int n, k;
   while (cin >> n) {
-	if (n == 0) return 0;
-	k = page(n);
+    if (n == 0) return 0;
+      k = page(n);
     cout << total(k) - n << " " << k << "\n";
   }
   return 0;
