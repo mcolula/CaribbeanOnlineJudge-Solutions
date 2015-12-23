@@ -13,14 +13,14 @@ double iper(int n, double r) {
 
 
 int main() {
-	int t;
-	int n;
-	double r;
-	scanf("%d", &t);
-	while (t--) {
-	  scanf("%lf %d", &r, &n);
-	  printf("%.4lf %.4lf\n", iper(n, r), cper(n, r));
-	}
-	return 0;
+  int t;
+  int n;
+  double r;
+  scanf("%d", &t);
+  while (t--) {
+    scanf("%lf %d", &r, &n);
+    printf("%.4lf %.4lf\n", iper(n, r), cper(n, r));
+  }
+  return 0;
 }
 
