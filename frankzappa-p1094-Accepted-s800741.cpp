@@ -53,18 +53,18 @@ int main() {
   map <string, int> people;
   scanf("%d", &t);
   while (t--) {
-	scanf("%d", &n);
+    scanf("%d", &n);
     create(&net, 2 * n);
     while (n--) {
-	  scanf("%s %s", a, b);
-	  if (people.count(a) == 0) 
-	    people[a] = people.size() - 1;  
-	  if (people.count(b) == 0)
-	    people[b] = people.size() - 1;
+      scanf("%s %s", a, b);
+      if (people.count(a) == 0)
+        people[a] = people.size() - 1;  
+      if (people.count(b) == 0)
+        people[b] = people.size() - 1;
       x = people[a];
       y = people[b];
       printf("%d\n", connect(&net, x, y));	
-	}
+    }
     people.clear();
   }
   return 0;
