@@ -45,7 +45,7 @@ vector<point> next(point * p, bool ** visited, int n) {
   int y = p->y;
   int w = p->w;
   if (valid(y, x - 1, n) && !visited[y][x - 1]) {
-	visited[y][x - 1] = true;
+    visited[y][x - 1] = true;
     ps.push_back(crea(x - 1, y, w + 1));
   }
   if (valid(y, x + 1, n) && !visited[y][x + 1]) {
@@ -53,11 +53,11 @@ vector<point> next(point * p, bool ** visited, int n) {
     ps.push_back(crea(x + 1, y, w + 1));
   }
   if (valid(y - 1, x, n) && !visited[y - 1][x]) {
-	visited[y - 1][x] = true;
+    visited[y - 1][x] = true;
     ps.push_back(crea(x, y - 1, w + 1));
   }
   if (valid(y + 1, x, n) && !visited[y + 1][x]) {
-	visited[y + 1][x] = true;
+    visited[y + 1][x] = true;
     ps.push_back(crea(x, y + 1, w + 1));
   }
   return ps;
@@ -72,9 +72,8 @@ int search(point * start, bool ** visited, int n) {
     current = pq.top();
     pq.pop();
     neighbors = next(&current, visited, n);
-    for (auto & i : neighbors) {
+    for (auto & i : neighbors)
       pq.push(i);
-    }
     if (current.x == goal.x && current.y == goal.y)
       return current.w;
   }
@@ -99,18 +98,16 @@ int main() {
   bool ** v = init(size);
   for (int i = 0; i < size; i++)
     for (int j = 0; j < size; j++) {
-	  cin >> c;
-	  if (c == 'm') {
-	    v[i][j] = true;
-	    start = crea(j, i, 0);
-	  }
-	  if (c == '#') {
-	    goal = crea(j, i, 0);
-	  }
-	  if (c == '*') {
-	    v[i][j] = true;  
-	  }
-	}
+      cin >> c;
+      if (c == 'm') {
+        v[i][j] = true;
+        start = crea(j, i, 0);
+      }
+      if (c == '#')
+        goal = crea(j, i, 0);
+      if (c == '*')
+        v[i][j] = true;  
+    }
   cout << search(&start, v, size) << endl;
   return 0;
 }
